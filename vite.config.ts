@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
-  base: "/kidsapp/",
+  base: process.env.GITHUB_ACTIONS ? "/kidsapp/" : "/",
   plugins: [react()],
   resolve: {
     alias: {
